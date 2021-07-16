@@ -1,0 +1,11 @@
+#include <chrono>
+using namespace chrono;
+
+int main() {
+    auto start = system_clock::now();
+    ...
+    auto end = system_clock::now();
+    auto duration = duration_cast<microseconds>(end - start); //微秒级
+    cout << double(duration.count()) << "us" << endl;
+    return 0;
+}
